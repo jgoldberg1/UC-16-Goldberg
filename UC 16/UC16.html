@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Zip Code Finder</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="UC16.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Exchange Rate Calculator</h2>
+      <br/>
+      <p>When entering currencies, please use the three capital letter abbreviation, like USD for US Dollars and JPY for Japanese Yen.</p>
+   
+          <input type="text" name="fromCurr3" id="fromCurr4" placeholder="USD" />
+  
+      <br />
+     
+          <input type="text" name="toCurr3" id="toCurr4" placeholder="JPY" />
+
+      
+      <br />
+      </div>
+      <div>
+        <button class='btn btn-success btn-large' onclick="calculateRates(fromCurr4, toCurr4)">Calculate</button>
+      </div>
+      <br />
+      <div>
+        <div id="rates" class=""></div>
+      </div>
+    </div>
+  </body>
+</html>

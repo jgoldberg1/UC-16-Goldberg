@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </head>
+  <body>
+    </br>
+      <center>
+      <h1>Unit Challenge 15</h1>
+      </center>
+<form action="http://www.aptweblab.org/request" method="post">
+
+<div class="container">
+    </br>
+    </br>
+    </br>
+        <fieldset class="form-group row">
+    <div class="form-group row">
+      <label for="name" class="col-sm-2 col-form-label">Name</label>
+      <div class="col-sm-10">
+        <input type="name" class="form-control" id="name" name="name" placeholder="Name">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="email" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+      </div>
+    </div>
+
+
+      <label for="catDog" class="col-sm-2 col-form-label">Are you a cat person, or a dog person?</label>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadiosCat" value="optionCat">
+              Cat
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadiosDog" value="optionDog">
+            Dog
+          </label>
+        </div>
+        <div class="form-check disabled">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadiosOther" value="optionOther">
+            Other
+          </label>
+        </div>
+      </div>
+         <div class="form-group">
+    <label for="exampleSelect2">What is your favorite ice cream flavor?</label>
+             </br>
+    <small id="iceCreamHelp" class="form-text text-muted">To select multiple options, control-click your preferences.</small>
+    <select multiple class="form-control" id="iceCream" name="iceCream">
+      <option>Chocolate</option>
+      <option>Vanilla</option>
+      <option>Coffee</option>
+      <option>Salted-Caramel</option>
+      <option>Chunky Monkey</option>
+    </select>
+  </div>
+    </fieldset>
+
+        <div class="form-group row">
+      <label for="msg" class="col-sm-2 col-form-label">Tell us how awesome this class is!</label>
+      <div class="col-sm-10">
+        <input type="msg" class="form-control" id="msg" name="message" placeholder="I love this class because...">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="offset-sm-2 col-sm-10">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+      </form>
+  </body>
+</html>

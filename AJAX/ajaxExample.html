@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="ajaxFuntions.js"></script>
+  </head>
+  <body>
+    <h3>Using AJAX to read data from a server.</h3>
+    <label for="fromCurr" class="col-sm-2 col-form-label">What currency are you ocnverting from?</label>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" name="fromCurr" id="AUD" value="AUD">
+              Australian Dollars
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadiosDog" value="optionDog">
+            Dog
+          </label>
+        </div>
+        <div class="form-check disabled">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadiosOther" value="optionOther">
+            Other
+          </label>
+        </div>
+      </div>
+    <button type="button" onclick="sendRequest()">Get Data</button>
+    <h3>Response Data:</h3>
+    <div id="output1"></div>
+
+  </body>
+</html>

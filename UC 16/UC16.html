@@ -15,17 +15,18 @@
       <br/>
       <p>When entering currencies, please use the three capital letter abbreviation, like USD for US Dollars and JPY for Japanese Yen.</p>
    
-          <input type="text" name="fromCurr3" id="fromCurr4" placeholder="USD" />
+          <input type="text" id="fromCurr" placeholder="USD" />
   
       <br />
      
-          <input type="text" name="toCurr3" id="toCurr4" placeholder="JPY" />
+          <input type="text" name="toCurr" id="toCurr" placeholder="JPY" />
 
       
       <br />
+
       </div>
       <div>
-        <button class='btn btn-success btn-large' onclick="calculateRates(fromCurr4, toCurr4)">Calculate</button>
+        <button class='btn btn-success btn-large' onclick="calculateRates('fromCurr', 'toCurr')">Calculate</button>
       </div>
       <br />
       <div>

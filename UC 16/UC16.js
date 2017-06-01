@@ -1,14 +1,22 @@
+var currFrom;
+var currTo;
+
+
+function getCurrencies(fromCurr, toCurr) {
+currFrom = document.getElementById(fromCurr).value;
+  console.log(currFrom);
+currTo = document.getElementById(toCurr).value;
+    console.log(currTo); 
+}
+
+
+
+
 /**
  * Uses AJAX to query an internet data source for zip codes
  * @param {string} zipId The element id that has the zip code
- */
-function calculateRates(fromCurr, toCurr) {
-    // First get the zip code from the HTML textbox
-var fromCurr = document.getElementById(fromCurr).value;
-  console.log(fromCurr);
-var toCurr = document.getElementById(toCurr).value;
-    console.log(toCurr);
-
+ */                       
+function calculateRates() {
     // Now make a HTTP request
     var httpRequest = new XMLHttpRequest();
     httpRequest.onreadystatechange = function () {
@@ -30,7 +38,7 @@ var toCurr = document.getElementById(toCurr).value;
     // Notice how the URL is appended with the zip codE
 
     
-    var url = "http://api.fixer.io/latest?base=" + fromCurr;
+    var url = "http://api.fixer.io/latest?base=" + currFrom;
     console.log(url);
     httpRequest.open("GET", url, true);
     httpRequest.send();
@@ -44,11 +52,19 @@ var toCurr = document.getElementById(toCurr).value;
  */
 function displayResponseData(data) {
 
+
 var data = JSON.stringify(data);
-var startMinusSix = data.search(toCurr);
+var startMinusSix = data.search(currTo);
 var startAt = startMinusSix + 6;
-var endAt = startAt + 6
-var exchangeRates = data.charAt(startAt-endAt);
+var endAt = startAt + 6;
+var exchangeRates = data.slice(startAt, endAt);
+console.log(data);
+console.log(startAt);
+console.log(endAt);
+console.log(currTo);
+console.log(exchangeRates);
+console.log(message);
+var message = "The exchange rate from " + currFrom + " to " + currTo + " is 1 to " + exchangeRates + "."
 //use charAt to get the rate. number starts 6 chars after the number that ata.search gives you so just to data.charAt()
-  document.getElementById("rates").innerHTML = exchangeRates;
+  document.getElementById("rates").innerHTML = message;
 }

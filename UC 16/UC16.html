@@ -10,28 +10,39 @@
     <script src="UC16.js"></script>
   </head>
   <body>
+      <center>
     <div class="container">
       <h2>Exchange Rate Calculator</h2>
       <br/>
-      <p>When entering currencies, please use the three capital letter abbreviation, like USD for US Dollars and JPY for Japanese Yen.</p>
-   
+      <p>When entering currencies, please use the three capital letter abbreviation, like USD for US Dollars and INR for Indian Rupees.</p>
+   <br />
+ 
+        <p>Convert from:</p>
           <input type="text" id="fromCurr" placeholder="USD" />
   
       <br />
+
+        <p>to:</p>
      
-          <input type="text" name="toCurr" id="toCurr" placeholder="JPY" />
+          <input type="text" name="toCurr" id="toCurr" placeholder="INR" />
 
       
       <br />
-
+<br />
       </div>
       <div>
-        <button class='btn btn-success btn-large' onclick="calculateRates('fromCurr', 'toCurr')">Calculate</button>
+        <button class='btn btn-success btn-large' onclick="getCurrencies('fromCurr', 'toCurr'), calculateRates()">Calculate</button>
       </div>
       <br />
+          <div>
+        <div id="fromTo" class=""></div>
+          </div>
       <div>
+       
         <div id="rates" class=""></div>
-      </div>
+     
+              </div>
     </div>
+      </center>
   </body>
 </html>
